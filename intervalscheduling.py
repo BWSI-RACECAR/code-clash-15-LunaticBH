@@ -44,7 +44,7 @@ class Solution:
             ranges = [0,0]
             for i in range(len(intervals)):
                 if intervals[i][0] == 1 and intervals[i][0] not in range(ranges[0],ranges[1]):
-                    if intervals[i][1] < 6:
+                    if intervals[i][1] < 5:
                         ans.append(intervals[i])
                         ranges = []
                         ranges.append(intervals[i][0])
