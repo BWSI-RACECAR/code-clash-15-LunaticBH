@@ -41,26 +41,45 @@ class Solution:
             #return type: list of int tuples
             intervals = sorted(intervals)
             ans = []
+            ranges = []
             for i in range(len(intervals)):
-                if intervals[i][0] == 1:
+                if intervals[i][0] == 1 and intervals[i][0] not in range(ranges[0],ranges[1]-1):
                     if intervals[i][1] < 5:
                         ans.append(intervals[i])
-                elif intervals[i][0] == 2:
+                        ranges = []
+                        ranges.append(intervals[i][0])
+                        ranges.append(intervals[i][1])
+                elif intervals[i][0] == 2 and intervals[i][0] not in range(ranges[0],ranges[1]-1):
                     if intervals[i][1] < 5:
                         ans.append(intervals[i])
-                elif intervals[i][0] == 3:
+                        ranges = []
+                        ranges.append(intervals[i][0])
+                        ranges.append(intervals[i][1])
+                elif intervals[i][0] == 3 and intervals[i][0] not in range(ranges[0],ranges[1]-1):
                     if intervals[i][1] < 5:
                         ans.append(intervals[i])
+                        ranges = []
+                        ranges.append(intervals[i][0])
+                        ranges.append(intervals[i][1])
                 else:
-                    if intervals[i][0] == 4:
+                    if intervals[i][0] == 4 and intervals[i][0] not in range(ranges[0],ranges[1]-1):
                         if intervals[i][1] < 8:
                             ans.append(intervals[i])
-                    elif intervals[i][0] == 5:
+                            ranges = []
+                            ranges.append(intervals[i][0])
+                            ranges.append(intervals[i][1])
+                    elif intervals[i][0] == 5 and intervals[i][0] not in range(ranges[0],ranges[1]-1):
                         if intervals[i][1] < 8:
                             ans.append(intervals[i])
-                    elif intervals[i][0] == 6:
+                            ranges = []
+                            ranges.append(intervals[i][0])
+                            ranges.append(intervals[i][1])
+                    elif intervals[i][0] == 6 and intervals[i][0] not in range(ranges[0],ranges[1]-1):
                         if intervals[i][1] < 8:
                             ans.append(intervals[i])
+                            ranges = []
+                            ranges.append(intervals[i][0])
+                            ranges.append(intervals[i][1])
             return ans
                                     
 
