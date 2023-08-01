@@ -41,7 +41,7 @@ class Solution:
             #return type: list of int tuples
             intervals = sorted(intervals)
             ans = []
-            ranges = []
+            ranges = [0,0]
             for i in range(len(intervals)):
                 if intervals[i][0] == 1 and intervals[i][0] not in range(ranges[0],ranges[1]-1):
                     if intervals[i][1] < 5:
